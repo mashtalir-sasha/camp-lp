@@ -1,9 +1,5 @@
 @import "vars"
 
-
-/*==========  Desktop First  ==========*/
-
-
 //Extra large: ≥1440px
 +media-breakpoint-down(xl)
 
@@ -12,30 +8,149 @@
 
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
+	.nav
+		&-list
+			&__item
+				a
+					margin: 0 5px
+	.program
+		&_bgline
+			&:before
+				transform: skewY(10.5deg)
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.nav
+		&-phone
+			float: left
+			margin-right: 20px
+	.head
+		&-ttl
+			font-size: 40px
+	.first
+		&-txt
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+		&-list
+			&__item
+				font-size: 15px
+				&:before
+					top: 8px
+	.program
+		&-block
+			&__img
+				margin: 20px auto 0
+	.mob
+		&-mnu
+			width: 100%
+			z-index: 10
+			height: 0
+			background-color: rgba(#000, .85)
+			position: fixed
+			top: 0
+			left: 0
+			overflow: hidden
+			transition: all ease .3s
+			&.show
+				height: 100vh
+				transition: all ease .3s
+			&-flex
+				display: flex
+				min-height: 100vh
+				&__content
+					margin: auto
+			&__btn
+				float: right
+			&-list
+				display: table
+				margin: 0 auto
+				overflow: hidden
+				padding-left: 0
+				margin-bottom: 0
+				list-style-type: none
+				&__item
+					display: table
+					margin: 0 auto 20px
+					&:last-child
+						margin-bottom: 40px
+					a
+						display: block
+						padding: 2px 0
+						margin: 0 15px
+						font-family: $medium-font
+						color: #fff
+						border-bottom: 1px dashed #fff
+						&:hover
+							color: darken(#fff, 10%)
+							border-color: darken(#fff, 10%)
+			&-phone
+				display: table
+				&__link
+					display: block
+					margin-bottom: 5px
+					color: #fff
+					&:last-child
+						margin-bottom: 0
+					&:hover
+						color: darken(#fff, 10%)
+			&__close
+				text-align: center
+				color: #fff
+				font-family: $medium-font
+				font-size: 24px
+				margin-top: 20px
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
+	.head
+		&-item
+			margin-bottom: 20px
+			&_last
+				margin-bottom: 0
+	.first
+		&-img
+			margin: 0 auto 20px
+		&-list
+			margin-bottom: 40px
+			&_last
+				margin-bottom: 0
+	.program
+		&_bgline
+			&:before
+				transform: skewY(18.5deg)
+	.foot
+		&-addr
+			text-align: center
+			&:last-child
+				margin-bottom: 40px
+		&-tel
+			&:last-child
+				margin-bottom: 40px
 
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
-
-
-/*==========  Mobile First  ==========*/
-
-//Extra small: <576px
-+media-breakpoint-up(xs)
-
-//Small: ≤576px
-+media-breakpoint-up(sm)
-
-//Medium: ≤768px
-+media-breakpoint-up(md)
-
-//Large: ≤992px
-+media-breakpoint-up(lg)
-
-//Extra large: ≤1200px
-+media-breakpoint-up(xl)
+	.head
+		&-ttl
+			font-size: 36px
+			line-height: 1.25
+			span
+				font-size: 26px
+	.first
+		&-ttl
+			font-size: 36px
+			line-height: 1.25
+	.program
+		&-ttl
+			font-size: 36px
+			line-height: 1.25
+		&_bgline
+			&:before
+				transform: skewY(28.5deg)
+		&-block
+			&__btn
+				padding: 8px 10px
+	.gallery
+		&-ttl
+			font-size: 36px
+			line-height: 1.25

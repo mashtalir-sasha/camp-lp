@@ -1,46 +1,29 @@
 $(function() {
 
+	// Старт видео при загрузке
+	document.getElementById('mov').play();
+
 	// Скролинг по якорям
 	$('.anchor').bind("click", function(e){
 		var anchor = $(this);
 		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top-106 // отступ от меню
+			scrollTop: $(anchor.attr('href')).offset().top-0 // отступ от меню
 		}, 500);
 	e.preventDefault();
 	});
 
-	// Меню при скроле
-	$(window).scroll(function(){
-		var topline = $(window).scrollTop();
-		if ( topline > 650 ) {
-			$(".posf").addClass('show');
-		} else {
-			$(".posf").removeClass('show');
-		};
-	});
-
 	// Клик по гамбургеру на моб версии
-	$('.mob-mnu__humb').click(function() {
-		$('.mob-mnu-list').toggleClass('show');
+	$('.mob-mnu__btn').click(function() {
+		$('.mob-mnu').toggleClass('show');
 	});
-	$('.mob-mnu__li').click(function() {
-		$('.mob-mnu-list').removeClass('show');
+	$('.mob-mnu-list__item a, .mob-mnu__close').click(function() {
+		$('.mob-mnu').removeClass('show');
 	});
 
 	// Формирование полей и заголовков формы в мод окне
-	$('.modal').click(function(){
-		var ttl = $(this).data('title');
-		var subTtl = $(this).data('subtitle');
-		var text = $(this).data('text');
-		var btn = $(this).data('btn');
-		var goal = $(this).data('goal');
-		var subject = $(this).data('subject');
-		$('.ttl').html(ttl);
-		$('.subTtl').html(subTtl);
-		$('.text').html(text);
-		$('.btn').html(btn);
-		$('.goal').val(goal);
-		$('.subject').val(subject);
+	$('.modal_event').click(function(){
+		var place = $(this).data('place');
+		$('.place').val(place);
 	});
 
 	// Отправка формы
@@ -55,7 +38,7 @@ $(function() {
 			data: data,
 			success: (function() {
 				$.fancybox.close();
-				$.fancybox.open('<div class="thn"><h3>Заявка отправлена!</h3><p>С Вами свяжутся в ближайшее время.</p></div>');
+				$.fancybox.open('<div class="thn"><h3>Спасибо за Вашу заявку!</h3><p>Наш специалист по танцам в течении часа свяжется с Вами и расскажет подробнее о школе, программах лагерей 2019, о броне и ценах</p></div>');
 				//gtag('event','submit',{'event_category':'submit','event_action':goalId});
 				//fbq('track', 'Lead');
 			})()
@@ -64,7 +47,7 @@ $(function() {
 	});
 
 	// Инит фансибокса
-	$('.fancybox, .modal').fancybox({
+	$('.fancybox, .modal_event').fancybox({
 		margin: 0,
 		padding: 0
 	});
@@ -72,7 +55,7 @@ $(function() {
 	//Якорь наверх
 	$("[href='#top']").click(function(e){
 		$('html, body').stop().animate({
-			scrollTop: $('#top').offset().top
+			scrollTop: $('body').offset().top
 		}, 300);
 		e.preventDefault();
 	});

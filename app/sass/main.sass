@@ -20,6 +20,7 @@ body
 	font-family: $regular-font
 	overflow-x: hidden
 	background-color: #fff
+	color: #2b2b2b
 	input, textarea
 		outline: none
 
@@ -44,5 +45,389 @@ button
 	outline: none
 	&:focus
 		outline: none
+
+.video
+	position: absolute
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -1
+
+.nav
+	padding: 20px 0
+	&-logo
+		max-width: 200px
+	&-list
+		display: table
+		margin: 0 auto
+		overflow: hidden
+		padding-left: 0
+		margin-bottom: 0
+		list-style-type: none
+		&__item
+			float: left
+			a
+				display: block
+				padding: 2px 0
+				margin: 0 15px
+				font-family: $medium-font
+				color: #fff
+				border-bottom: 1px dashed #fff
+				&:hover
+					color: darken(#fff, 10%)
+					border-color: darken(#fff, 10%)
+	&-phone
+		float: right
+		&__link
+			display: block
+			margin-bottom: 5px
+			color: #fff
+			&:last-child
+				margin-bottom: 0
+			&:hover
+				color: darken(#fff, 10%)
+
+.head
+	position: relative
+	overflow: hidden
+	min-height: calc( 100vh - 98px - 171px )
+	//background: linear-gradient(180deg, #F4F4F4 0%, rgba(241, 245, 25, 0.82) 58.33%)
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: rgba(#000, .75)
+	&-flex
+		min-height: calc( 100vh - 98px - 171px )
+		display: flex
+		&__content
+			margin: auto
+	&-ttl
+		text-transform: uppercase
+		font-family: $title-font
+		font-size: 44px
+		text-align: center
+		margin-bottom: 40px
+		color: #fff
+		span
+			display: table
+			margin: 0 auto
+			font-size: 34px
+			color: #000
+			background-color: #fff
+			padding: 2px 10px
+	&-item
+		&__numb
+			width: 108px
+			height: 80px
+			background-image: url(../img/head_item_numb.png)
+			margin: 0 auto 20px
+			font-family: $black-font
+			font-size: 36px
+			text-align: center
+			line-height: 80px
+			color: #fff
+		&__txt
+			font-family: $medium-font
+			text-align: center
+			color: #fff
+	&-foot
+		padding: 40px 0
+		&__link
+			display: table
+			margin: 0 auto
+			position: relative
+			top: 0
+			color: #fff
+			padding: 35px 0
+			font-family: $bold-font
+			font-size: 14px
+			text-transform: uppercase
+			transition: all ease .3s
+			&:before
+				content: ''
+				width: 50px
+				height: 30px
+				border: 2px solid #fff
+				border-bottom: none
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				margin-left: auto
+				margin-right: auto
+			&:after
+				content: ''
+				width: 50px
+				height: 30px
+				border: 2px solid #fff
+				border-top: none
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				margin-left: auto
+				margin-right: auto
+				background-image: url(../img/arrow_bottom.svg)
+				background-size: 15px 15px
+				background-position: center center
+				background-repeat: no-repeat
+			&:hover
+				position: relative
+				top: 15px
+				color: #fff
+
+.first
+	padding: 40px 0
+	&-ttl
+		font-family: $title-font
+		text-align: center
+		font-size: 44px
+		margin-bottom: 40px
+	&-img
+		margin-bottom: 20px
+	&-txt
+		max-width: 360px
+		margin: 0 auto
+		padding: 20px 0
+		text-align: center
+		background-image: url(../img/first_txt.png)
+		font-family: $medium-font
+	&-list
+		position: relative
+		z-index: 1
+		padding-left: 0
+		margin-bottom: 0
+		list-style-type: none
+		&__item
+			padding-left: 20px
+			position: relative
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: ''
+				width: 6px
+				height: 6px
+				border-radius: 50% 50%
+				position: absolute
+				top: 10px
+				left: 0
+				background-color: $accent
+
+.program
+	padding: 80px 0
+	&_gray
+		background-color: #f7f7f7
+		position: relative
+	&_bgline
+		&:before
+			content: ''
+			background: #fff
+			top: 0
+			content: ''
+			display: block
+			height: 200px
+			left: 0
+			position: absolute
+			right: 0
+			transform: skewY(7.5deg)
+			transform-origin: 100%
+	&-ttl
+		position: relative
+		font-family: $title-font
+		font-size: 44px
+		margin-bottom: 20px
+		padding-bottom: 20px
+		&:after
+			content: ''
+			width: 60px
+			height: 1px
+			background-color: #2b2b2b
+			position: absolute
+			bottom: 0
+			left: 0
+	&-txt
+		margin-bottom: 40px
+	&-block
+		&__ttl
+			font-family: $bold-font
+			font-size: 28px
+			margin-bottom: 20px
+		&__txt
+			margin-bottom: 20px
+		&__item
+			padding-left: 40px
+			font-family: $medium-font
+			font-size: 18px
+			margin-bottom: 5px
+			&.date
+				background-image: url(../img/program_item1.svg)
+				background-size: 24px 24px
+				background-position: 0 2px
+				background-repeat: no-repeat
+			&.price
+				background-image: url(../img/program_item2.svg)
+				background-size: 24px 24px
+				background-position: 0 2px
+				background-repeat: no-repeat
+			&.include
+				background-image: url(../img/program_item3.svg)
+				background-size: 24px 24px
+				background-position: 0 2px
+				background-repeat: no-repeat
+			&.last
+				background-image: url(../img/program_item4.svg)
+				background-size: 24px 24px
+				background-position: 0 2px
+				background-repeat: no-repeat
+		&-list
+			padding-left: 0
+			margin-bottom: 20px
+			margin-left: 40px
+			list-style-type: none
+			&__item
+				padding-left: 20px
+				position: relative
+				margin-bottom: 5px
+				&:last-child
+					margin-bottom: 0
+				&:before
+					content: ''
+					width: 6px
+					height: 6px
+					border-radius: 50% 50%
+					position: absolute
+					top: 10px
+					left: 0
+					background-color: $accent
+		&__link
+			display: table
+			color: inherit
+			border-bottom: 1px dashed #2b2b2b
+			font-family: $medium-font
+			margin-bottom: 20px
+		&__btn
+			display: table
+			padding: 8px 20px
+			font-family: $medium-font
+			background-color: $accent
+			border-bottom: 2px solid darken($accent, 15%)
+			border-radius: 25px
+			color: inherit
+			&:hover
+				transition: all ease .3s
+				background-color: darken($accent, 5%)
+				border-bottom: 2px solid darken($accent, 20%)
+
+.gallery
+	padding: 40px 0
+	&-ttl
+		font-family: $title-font
+		text-align: center
+		font-size: 44px
+		margin-bottom: 40px
+
+.foot
+	padding: 40px 0
+	background-color: #f7f7f7
+	&-ttl
+		font-family: $title-font
+		text-align: center
+		font-size: 44px
+		margin-bottom: 40px
+	&-subttl
+		font-family: $medium-font
+		font-size: 20px
+		text-align: center
+		margin-bottom: 20px
+	&-addr
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0
+	&-tel
+		display: block
+		color: inherit
+		text-align: center
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0
+	&-soc
+		display: table
+		margin: 0 auto
+		&__link
+			display: inline-block
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+
+.cprt
+	font-size: 12px
+	text-align: center
+	margin-top: 40px
+
+.modal
+	max-width: 600px
+	&-form
+		&__ttl
+			font-family: $title-font
+			font-size: 28px
+			text-align: center
+			margin-bottom: 20px
+		&__txt
+			margin-bottom: 20px
+			text-align: center
+		&__btn
+			display: table
+			padding: 8px 20px
+			font-family: $medium-font
+			background-color: $accent
+			border-bottom: 2px solid darken($accent, 15%)
+			border-radius: 25px
+			color: inherit
+			margin: 0 auto
+			&:hover
+				transition: all ease .3s
+				background-color: darken($accent, 5%)
+				border-bottom: 2px solid darken($accent, 20%)
+		.rline
+			position: relative
+			display: table
+			margin: 0 auto 20px
+		&__input
+			padding: 8px 20px
+			font-family: $medium-font
+			border-radius: 25px
+			border: 2px solid #e4e4e4
+		.rfield_error
+			position: absolute
+			bottom: 2px
+			right: 15px
+			font-size: 12px
+			color: red
+			visibility: hidden
+	&-program
+		&__ttl
+			font-family: $title-font
+			font-size: 28px
+			margin-bottom: 20px
+		&__txt
+			span
+				font-family: $medium-font
+
+.thn
+	max-width: 600px
+	h3
+		font-family: $title-font
+		font-size: 28px
+		text-align: center
+		margin-bottom: 20px
+	p
+		text-align: center
+
 
 @import "media" // Always at the end
