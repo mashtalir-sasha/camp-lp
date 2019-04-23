@@ -3,17 +3,17 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>лагерь</title>
-	<meta name="description" content="">
+	<title>Танцевальный лагерь 2019 от 3000 грн для детей от 5 до 17 лет</title>
+	<meta name="description" content="Лагерь для детей от 5 лет в Болгарии, Карпатах и Киеве. 7 лет опыта. Более 3000 детей. Летний лагерь от команды Dream Team">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!--
-	<meta property="og:title" content="">
-	<meta property="og:description" content="">
+	
+	<meta property="og:title" content="Танцевальный лагерь 2019 от 3000 грн для детей от 5 до 17 лет">
+	<meta property="og:description" content="Лагерь для детей от 5 лет в Болгарии, Карпатах и Киеве. 7 лет опыта. Более 3000 детей. Летний лагерь от команды Dream Team">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:image" content=""/>
-	-->
+	<meta property="og:url" content="http://camp.dance-school.kiev.ua/">
+	<meta property="og:image" content="http://camp.dance-school.kiev.ua/img/gallery/1.jpg"/>
+	
 	<link rel="icon" href="img/favicon/favicon.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<meta name="theme-color" content="#f1f519">
@@ -160,7 +160,10 @@
 				</div>
 			</div>
 			<div class="row align-items-center">
-				<div class="col-lg-7 col-md-6">
+				<div class="col-lg-5 col-md-6 order-md-2">
+					<img src="img/program1.jpg" class="img-r program-block__img" alt="Карпаты, Ворохта">
+				</div>
+				<div class="col-lg-7 col-md-6 order-md-1">
 					<div class="program-block">
 						<h4 class="program-block__ttl">Карпаты, Ворохта</h4>
 						<p class="program-block__txt">Ворохта - курортный городок в самом сердце Карпат. Чистый воздух, природа, горы и прекрасная летняя погода</p>
@@ -179,17 +182,17 @@
 						<a href="#modal" class="program-block__btn modal_event" data-place="Карпаты, Ворохта">Обсудить детали с администратором</a>
 					</div>
 				</div>
-				<div class="col-lg-5 col-md-6">
-					<img src="img/program1.jpg" class="img-r program-block__img" alt="Карпаты, Ворохта">
-				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="prog2" class="program">
+	<section id="prog2" class="program program_yelow">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-lg-7 col-md-6">
+				<div class="col-lg-5 col-md-6 order-md-2">
+					<img src="img/program2.jpg" class="img-r program-block__img" alt="Болгария, г. Албена">
+				</div>
+				<div class="col-lg-7 col-md-6 order-md-1">
 					<div class="program-block">
 						<h4 class="program-block__ttl">Болгария, г. Албена</h4>
 						<p class="program-block__txt">Заповедник Балтата в лучшем курортном городе Албена - экологически чистый воздух гор и моря</p>
@@ -207,9 +210,6 @@
 						<a href="#modal" class="program-block__btn modal_event" data-place="Болгария, г. Албена">Обсудить детали с администратором</a>
 					</div>
 				</div>
-				<div class="col-lg-5 col-md-6">
-					<img src="img/program2.jpg" class="img-r program-block__img" alt="Болгария, г. Албена">
-				</div>
 			</div>
 		</div>
 	</section>
@@ -217,7 +217,10 @@
 	<section id="prog3" class="program program_gray">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-lg-7 col-md-6">
+				<div class="col-lg-5 col-md-6 order-md-2">
+					<img src="img/program3.jpg" class="img-r program-block__img" alt="Киев, Виноградарь">
+				</div>
+				<div class="col-lg-7 col-md-6 order-md-1">
 					<div class="program-block">
 						<h4 class="program-block__ttl">Киев, Виноградарь</h4>
 						<p class="program-block__txt">Детский лагерь летнего пребывания в школе танцев “Dream Team” по ул. Межевая, 18 (Виноградарь)</p>
@@ -235,9 +238,6 @@
 						<a href="#program3" class="program-block__link fancybox">Смотреть режим дня</a>
 						<a href="#modal" class="program-block__btn modal_event" data-place="Киев, Виноградарь">Обсудить детали с администратором</a>
 					</div>
-				</div>
-				<div class="col-lg-5 col-md-6">
-					<img src="img/program3.jpg" class="img-r program-block__img" alt="Киев, Виноградарь">
 				</div>
 			</div>
 		</div>
@@ -302,7 +302,7 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<p class="cprt">2019 © Dream-team Dance School. Все права защищены.</p>
+					<p class="cprt"><?=date('Y')?> © Dream-team Dance School. Все права защищены.</p>
 				</div>
 			</div>
 		</div>

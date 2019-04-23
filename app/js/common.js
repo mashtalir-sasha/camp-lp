@@ -49,7 +49,8 @@ $(function() {
 	// Инит фансибокса
 	$('.fancybox, .modal_event').fancybox({
 		margin: 0,
-		padding: 0
+		padding: 0,
+		touch: false
 	});
 
 	//Якорь наверх

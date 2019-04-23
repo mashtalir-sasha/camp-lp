@@ -40,7 +40,7 @@
 	.program
 		&-block
 			&__img
-				margin: 20px auto 0
+				margin: 0 auto 20px
 	.mob
 		&-mnu
 			width: 100%
@@ -108,6 +108,9 @@
 			margin-bottom: 20px
 			&_last
 				margin-bottom: 0
+		&-foot
+			&__link
+				display: none
 	.first
 		&-img
 			margin: 0 auto 20px
@@ -141,12 +144,13 @@
 			font-size: 36px
 			line-height: 1.25
 	.program
+		&_bgline
+			&:before
+				top: -80px
+				transform: skewY(10deg)
 		&-ttl
 			font-size: 36px
 			line-height: 1.25
-		&_bgline
-			&:before
-				transform: skewY(28.5deg)
 		&-block
 			&__btn
 				padding: 8px 10px

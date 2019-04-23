@@ -92,7 +92,6 @@ button
 	position: relative
 	overflow: hidden
 	min-height: calc( 100vh - 98px - 171px )
-	//background: linear-gradient(180deg, #F4F4F4 0%, rgba(241, 245, 25, 0.82) 58.33%)
 	&:before
 		content: ''
 		width: 100%
@@ -104,6 +103,7 @@ button
 	&-flex
 		min-height: calc( 100vh - 98px - 171px )
 		display: flex
+		padding-top: 40px
 		&__content
 			margin: auto
 	&-ttl
@@ -112,7 +112,7 @@ button
 		font-size: 44px
 		text-align: center
 		margin-bottom: 40px
-		color: #fff
+		color: $accent
 		span
 			display: table
 			margin: 0 auto
@@ -182,7 +182,7 @@ button
 				color: #fff
 
 .first
-	padding: 40px 0
+	padding-top: 40px
 	&-ttl
 		font-family: $title-font
 		text-align: center
@@ -220,10 +220,22 @@ button
 				background-color: $accent
 
 .program
+	position: relative
 	padding: 80px 0
 	&_gray
 		background-color: #f7f7f7
-		position: relative
+	&_yelow
+		background-color: $accent
+		.program-block__btn
+			background-color: #ba0000
+			border-bottom: 2px solid darken(#ba0000, 15%)
+			color: #fff
+			&:hover
+				background-color: darken(#ba0000, 5%)
+				border-bottom: 2px solid darken(#ba0000, 20%)
+		.program-block-list__item:before
+			background-color: #2b2b2b
+
 	&_bgline
 		&:before
 			content: ''
