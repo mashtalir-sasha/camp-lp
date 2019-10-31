@@ -40,7 +40,7 @@ $(function() {
 				$.fancybox.close();
 				$.fancybox.open('<div class="thn"><h3>Спасибо за Вашу заявку!</h3><p>Наш специалист по танцам в течении часа свяжется с Вами и расскажет подробнее о школе, программах лагерей 2019, о броне и ценах</p></div>');
 				//gtag('event','submit',{'event_category':'submit','event_action':goalId});
-				//fbq('track', 'Lead');
+				fbq('track', 'Lead');
 			})()
 		});
 		return false;
